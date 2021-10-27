@@ -11,6 +11,8 @@
     // for object observer to notice when sticking // will add
     top: -1px
     width: 100%
+    z-index: 100
+    background: var(--color-light)
     +pad
     .container
       display: flex

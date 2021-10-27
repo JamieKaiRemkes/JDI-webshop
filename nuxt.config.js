@@ -85,7 +85,13 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true // Can be also an object with default options
+  },
+
+  proxy: {
+    '/api/': { target: 'https://46782a8d-5b4f-461f-a027-152e75f85d9b.mock.pstmn.io/', pathRewrite: {'^/api/': ''} }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
