@@ -1,6 +1,6 @@
 <template lang="pug">
   //- Use dynamic vue components to render button or link
-  component.btn(:is='componentType' :href='href' :type='type' :disabled='disabled' :class='{loading: loading, borderless: borderless}')
+  component.btn(:is='componentType' :href='href' :type='type' :disabled='disabled' :class='{loading: loading}')
     slot
     span {{text}}
 </template>
@@ -51,7 +51,7 @@ export default {
     display: flex
     flex-direction: row
     align-items: center
-    justify-content: center
+    justify-content: left
     font-weight: var(--font-weight-bold) !important
     font-size: 0.85em !important
     text-decoration: underline
@@ -64,8 +64,10 @@ export default {
     padding: 0.4rem 0.6rem
     border-radius: 0.2rem
     span
+      width: 100%
       font: inherit
       position: relative
+      text-align: center
     &:disabled
       background: var(--color-light-secondary)
       color: var(--color-disabled)

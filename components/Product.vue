@@ -9,7 +9,7 @@
 
 <template lang="pug">
   .product
-    img.tumb(:src='data.image')
+    img.tumb(:src='"/" + data.image[0]')
     h5.title(@click='showProductDetails(data.id)') {{ data.title }}
     .price
       h6 {{ data.price }}
@@ -33,6 +33,7 @@ export default Vue.extend({
     },
     addToCart (productId: number) {
       // add to cart with product id
+      // would be nice to centralise with vue store
       console.log(`Added product with id: ${productId} to cart`);
     }
   }
