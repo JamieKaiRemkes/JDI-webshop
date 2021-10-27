@@ -15,7 +15,17 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "@assets/sass/app.sass"
   ],
+
+  // Sass global styles
+  styleResources: {
+    sass: [
+      // Include app mixins and global vars
+      '@assets/sass/mixins/_mixins.sass',
+      '@assets/sass/animations/_animations.sass'
+    ]
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -27,7 +37,10 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    '@nuxtjs/style-resources',
+    // https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
