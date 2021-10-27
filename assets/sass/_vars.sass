@@ -1,0 +1,37 @@
+// External fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap')
+
+:root
+  // Fonts
+  --font-family: 'Roboto', sans-serif
+  --font-size-base: 0.95rem
+  --font-weight: 300
+  --font-weight-bold: 700
+  // Font sizes using fibonacci sequence on desktop
+  --font-size-factor: 1.618
+  +sm
+    --font-size-factor: 1.4
+
+  // Colors
+  --color-primary: #0AFF91
+  --color-secondary: #00B4D8
+
+  --color-light: #ffffff
+  --color-light-secondary: #f6f6f6
+  --color-dark: #262626
+  --color-dark-secondary: #7c7c7c
+  --color-succes: #02c94e
+  --color-succes-text: var(--color-light)
+
+  --color-disabled: #7e7e7e
+
+  // Icons
+  --icon-size: 1.4rem
+
+  // Animations
+  --animation-speed: 0.14s
+  --animation-curve: ease
+
+  // Spacing
+  --ui-margin-x: 1.5rem
+  --ui-margin-y: 1.2rem

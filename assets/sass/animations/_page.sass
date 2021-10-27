@@ -1,0 +1,15 @@
+// Default page transitions for Nuxt
+.page-enter-active, .page-leave-active
+  transition: all calc(var(--animation-speed) * 1.2) var(--animation-curve) !important
+  opacity: 1
+
+.page-enter
+  opacity: 0 !important
+.page-leave-to
+  opacity: 0 !important
+
+.layout-enter-active, .layout-leave-active
+  transition: all calc(var(--animation-speed) * 1.2) var(--animation-curve) !important
+
+.layout-enter, .layout-leave-to
+  opacity: 0 !important
