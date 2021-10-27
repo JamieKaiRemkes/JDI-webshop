@@ -44,7 +44,8 @@ export default Vue.extend({
     addToCart (productId: number) {
       // add to cart with product id
       // would be nice to centralise with vue store
-      console.log(`Added product with id: ${productId} to cart`);
+      // eslint-disable-next-line no-console
+      console.log(`Added product with id: ${productId} to cart`)
     }
   }
 })

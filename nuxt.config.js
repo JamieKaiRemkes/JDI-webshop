@@ -15,7 +15,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "@assets/sass/app.sass"
+    '@assets/sass/app.sass'
   ],
 
   // Sass global styles
@@ -50,7 +50,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://i18n.nuxtjs.org/
-    '@nuxtjs/i18n',
+    '@nuxtjs/i18n'
   ],
 
   i18n: {
@@ -90,7 +90,7 @@ export default {
   },
 
   proxy: {
-    '/api/': { target: 'https://46782a8d-5b4f-461f-a027-152e75f85d9b.mock.pstmn.io/', pathRewrite: {'^/api/': ''} }
+    '/api/': { target: 'https://46782a8d-5b4f-461f-a027-152e75f85d9b.mock.pstmn.io/', pathRewrite: { '^/api/': '' } }
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
