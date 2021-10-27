@@ -1,8 +1,19 @@
+<i18n lang='yaml'>
+  en:
+    add-to-cart: "Add to cart"
+    tax: "excl tax"
+  nl:
+    add-to-cart: "In winkelwagen"
+    tax: "excl BTW"
+</i18n>
+
 <template lang="pug">
   .product
     img.tumb(:src='data.image')
     h5.title(@click='showProductDetails(data.id)') {{ data.title }}
-    h6.price {{ data.price }}
+    .price
+      h6 {{ data.price }}
+      span {{ $t('tax') }}
     Button.add(:text="$t('add-to-cart')" @click.native='addToCart(data.id)')
       Icon(name='cart')
 </template>
@@ -49,12 +60,19 @@ export default Vue.extend({
       overflow: scroll
       word-wrap: break-word
     .price
+      display: flex
+      flex-direction: column
       grid-area: price
       align-self: end
       justify-self: end
-      font-weight: bolder
-      &::before
-        content: '€ '
+      h6
+        font-weight: bolder
+        &::before
+          content: '€ '
+      span
+        // Smaller then price
+        font-size: 0.7em
+        align-self: end
     .add
       grid-area: add
       align-self: end
