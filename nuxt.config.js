@@ -35,8 +35,41 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://i18n.nuxtjs.org/
+    '@nuxtjs/i18n',
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US'
+      },
+      {
+        code: 'nl',
+        iso: 'nl-NL'
+      }
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix',
+    seo: true,
+    vueI18nLoader: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieCrossOrigin: false,
+      cookieDomain: null,
+      cookieKey: 'locale',
+      cookieSecure: false,
+      // Always redirect according to cookie
+      alwaysRedirect: true,
+      fallbackLocale: 'en',
+      // Better for SEO
+      onlyOnRoot: true
+    },
+    // To fix jumping pages on locale change
+    skipSettingLocaleOnNavigate: true
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
