@@ -23,7 +23,10 @@ export default Vue.extend({
   },
   methods: {
     handleIntersection (e: IntersectionObserverEntry[]) {
-      !e[0].isIntersecting && (document.querySelector('#__page').scrollTop > 0) ? this.sticking = true : this.sticking = false
+      const el = document.querySelector('#__page')
+      if (el) {
+        !e[0].isIntersecting && (el.scrollTop > 0) ? this.sticking = true : this.sticking = false
+      }
     }
   }
 })
